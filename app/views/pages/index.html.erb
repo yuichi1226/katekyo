@@ -1,0 +1,18 @@
+<h1>Pages#Index</h1>
+<%= redirect_mypage %>
+<table>
+	<tbody>
+		<tr>
+			<th>タイトル</th>
+			<th>ポイント</th>
+			<th>ユーザー名</th>
+		</tr>
+		<% @questions.each do |question| %>
+		<tr>
+			<th><%= question.title %></th>
+			<th><%= question.point %></th>
+      <th><%= find_user(question) %></th>
+		</tr>
+		<% end %>
+	</tbody>
+</table>

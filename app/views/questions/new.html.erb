@@ -1,0 +1,18 @@
+<h1>Questions#new</h1>
+<p>Find me in app/views/questions/new.html.erb</p>
+<%= form_for @question, :url => {:action => 'create'} do |f| %>
+<p>
+	<%= f.label :title %>
+	<%= f.text_field :title %>
+</p>
+<p>
+	<%= f.label :body %>
+	<%= f.text_area :body, :size => "20x10" %>
+</p>
+<p>
+	<%= f.label :point %>
+	<%= f.number_field :point %>
+</p>
+<%= f.submit %>
+
+<% end %>
